@@ -21,18 +21,4 @@ fun main() { //Покупка
         val change = paymentAmount - purchaseAmount
         println("Возьмите сдачу: ${"%.1f".format(change)}")
     }
-
-//Случайное число
-    val randomNumber = (1..10).random()
-    println("Введите догадку:")
-    val rand = readLine()?.toIntOrNull() ?: return println("Введено пустое значение")
-
-    do {
-
-        when {
-            rand < randomNumber -> println("Требуется большее число.")
-            rand > randomNumber -> println("Требуется меньшее число.")
-            else -> println("Вы угадали число!")
-        }
-    } while (rand != randomNumber)
 }
